@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    background-color: #020617;
+}
+
+@keyframes gradient-flow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-flow {
+    background-size: 200% 200%;
+    animation: gradient-flow 8s ease infinite;
+}
+
+@layer components {
+    .stroke-dasharray {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 20s linear forwards, fill 4s 2s linear forwards;
+    }
+
+    @keyframes dash {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes fill {
+        from {
+            fill: transparent;
+        }
+
+        to {
+            fill: currentColor;
+        }
+    }
+}
+
+.rectangle {
+    opacity: 1;
+    transition: transform 3s ease-in, opacity 3s ease-in;
+    transform-origin: center center
+}
+
+.rectangle.animate {
+    transform: scale(0.55)
+}
+
+.border-glow {
+    box-shadow: 0 0 15px 5px rgba(0, 123, 255, 0.5), 0 0 20px 15px rgba(0, 123, 255, 0.2);
+}
