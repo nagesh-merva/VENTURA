@@ -43,6 +43,7 @@ const cardVariants = {
 function MainEventDisplay() {
     return (
         <div className="relative z-40 mx-5 my-10 md:mx-24 md:my-20 px-4 py-8 bg-white/10 border border-gray-300 rounded-lg shadow-md backdrop-blur-lg">
+            <h1 className="text-4xl font-bold text-blue-500 mb-8">MAIN EVENTS</h1>
             <ol className="space-y-10 z-50">
                 {mainEvents.map((event, index) => (
                     <motion.li
@@ -50,7 +51,7 @@ function MainEventDisplay() {
                         className="relative flex flex-col sm:flex-row items-center mb-8 border border-blue-500/30 p-6 rounded-lg bg-gradient-to-r from-blue-900/60 via-gray-900 to-blue-900/60 backdrop-blur-lg shadow-lg glow-effect"
                         initial="offscreen"
                         whileInView="onscreen"
-                        viewport={{ once: true, amount: 0.8 }}
+                        viewport={{ once: true, amount: 0.3 }}
                         variants={cardVariants}
                     >
 
