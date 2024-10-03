@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 // import { Routes, Route } from 'react-router-dom'
 import IndexPage from "./pages/Index"
+import LoadingScreen from './components/LoadingScreen';
 
 function App() {
 
@@ -9,7 +10,9 @@ function App() {
       {/* <Routes>
         <Route path="/" element={<IndexPage />} />
       </Routes> */}
-      <IndexPage />
+      <Suspense fallback={<LoadingScreen />}>
+        <IndexPage />
+      </Suspense>
     </div>
   )
 }
