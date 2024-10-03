@@ -24,8 +24,8 @@ function MainScreen() {
     return (
         <div className="h-full w-full z-40 relative">
             <div className="relative px-4  md:px-0 pt-4 h-full w-full flex flex-col justify-center items-center">
-                <Lottie animationData={animation_A} className="fixed bottom-0 md:-bottom-60 z-0 scale-150 md:scale-100" />
-                <Lottie animationData={animation_B} className="fixed top-0 md:-top-28 md:right-0 z-0 scale-150 md:scale-100" />
+                <Lottie animationData={animation_A} className="fixed optimse bottom-0 md:-bottom-60 z-0 scale-150 md:scale-100" />
+                <Lottie animationData={animation_B} className="fixed optimse top-0 md:-top-28 md:right-0 z-0 scale-150 md:scale-100" />
                 <svg
                     ref={textRef}
                     viewBox="0 0 150 40"
@@ -40,7 +40,7 @@ function MainScreen() {
                 </svg>
                 <p className='text-md pt-5 md:text-3xl font-semibold font-poppins text-stone-300 text-center pb-4 tracking-wide '>Brought to you by ECELL GEC in Collaboration with Vibrant Goa</p>
                 <motion.div
-                    className="box"
+                    className="box optimse"
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{
@@ -48,7 +48,7 @@ function MainScreen() {
                         delay: 0.5,
                         ease: [0, 0.71, 0.2, 1.01]
                     }}
-                ><img src="/vibrantgoa.png" alt="vibrantgoa" className="h-20 z-40 md:h-48 w-auto " />
+                ><img src="/vibrantgoa.png" alt="vibrantgoa" className="h-20 optimse z-40 md:h-48 w-auto " />
                 </motion.div>
             </div>
         </div>

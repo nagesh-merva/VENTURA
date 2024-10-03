@@ -7,7 +7,7 @@ function Footer() {
                 <div className="flex flex-col md:flex-row items-center justify-between mb-8">
                     <div className="flex flex-col items-center md:items-start">
                         <img src="/gec.png" alt="College Logo" className="w-32 h-32 object-contain mb-4" />
-                        <h2 className="text-2xl font-bold">Goa Collage of Engineering</h2>
+                        <h2 className="text-2xl font-bold">Goa College of Engineering</h2>
                     </div>
                     <div className="mt-8 md:mt-0">
                         <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
@@ -48,7 +48,7 @@ function Footer() {
             <div className="border-t border-gray-700 mt-8 pt-4 text-center">
                 <p>&copy; 2024 ECELL. All rights reserved.</p>
                 <p className="text-sm mt-1">
-                    Designed by <a href="https://yourwebsite.com" className="text-blue-500 hover:underline">Nagesh Merva</a>
+                    Designed by <a href="https://www.linkedin.com/in/nagesh-merva-8b2b57289" className="text-blue-500 hover:underline">Nagesh Merva</a>
                 </p>
             </div>
         </footer>

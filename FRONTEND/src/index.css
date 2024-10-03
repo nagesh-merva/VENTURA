@@ -31,6 +31,7 @@ body {
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
         animation: dash 20s linear forwards, fill 4s 2s linear forwards;
+        transform: translate3d(0, 0, 0);
     }
 
     @keyframes dash {
@@ -50,16 +51,10 @@ body {
     }
 }
 
-.rectangle {
-    opacity: 1;
-    transition: transform 3s ease-in, opacity 3s ease-in;
-    transform-origin: center center
-}
-
-.rectangle.animate {
-    transform: scale(0.55)
-}
-
 .border-glow {
     box-shadow: 0 0 15px 5px rgba(0, 123, 255, 0.5), 0 0 20px 15px rgba(0, 123, 255, 0.2);
+}
+
+.optimse {
+    transform: translate3d(0, 0, 0);
 }

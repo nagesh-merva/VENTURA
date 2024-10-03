@@ -48,7 +48,7 @@ function MainEventDisplay() {
                 {mainEvents.map((event, index) => (
                     <motion.li
                         key={index}
-                        className="relative flex flex-col sm:flex-row items-center mb-8 border border-blue-500/30 p-6 rounded-lg bg-gradient-to-r from-blue-900/60 via-gray-900 to-blue-900/60 backdrop-blur-lg shadow-lg glow-effect"
+                        className="relative optimse flex flex-col sm:flex-row items-center mb-8 border border-blue-500/30 p-6 rounded-lg bg-gradient-to-r from-blue-900/60 via-gray-900 to-blue-900/60 backdrop-blur-lg shadow-lg glow-effect"
                         initial="offscreen"
                         whileInView="onscreen"
                         viewport={{ once: true, amount: 0.3 }}
