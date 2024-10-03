@@ -2,11 +2,18 @@ import { useState, useRef, useEffect } from "react"
 import Lottie from "lottie-react"
 import { timeline } from '@motionone/dom'
 import { motion } from "framer-motion"
-import animation_A from '../assets/Animation-1.json'
-import animation_B from '../assets/Animation-2.json'
+const animationALoader = () => import('../assets/Animation-1.json')
+const animationBLoader = () => import('../assets/Animation-2.json')
 
 function MainScreen() {
     const textRef = useRef(null)
+    const [animationA, setAnimationA] = useState(null)
+    const [animationB, setAnimationB] = useState(null)
+
+    useEffect(() => {
+        animationALoader().then((anim) => setAnimationA(anim.default))
+        animationBLoader().then((anim) => setAnimationB(anim.default))
+    }, [])
 
     useEffect(() => {
         const svg = textRef.current
@@ -24,8 +31,8 @@ function MainScreen() {
     return (
         <div className="h-full w-full z-40 relative">
             <div className="relative px-4  md:px-0 pt-4 h-full w-full flex flex-col justify-center items-center">
-                <Lottie animationData={animation_A} className="fixed optimse bottom-0 md:-bottom-60 z-0 scale-150 md:scale-100" />
-                <Lottie animationData={animation_B} className="fixed optimse top-0 md:-top-28 md:right-0 z-0 scale-150 md:scale-100" />
+                {animationA && <Lottie animationData={animationA} className="fixed optimse bottom-0 md:-bottom-60 z-0 scale-150 md:scale-100" />}
+                {animationB && <Lottie animationData={animationB} className="fixed optimse top-0 md:-top-28 md:right-0 z-0 scale-150 md:scale-100" />}
                 <svg
                     ref={textRef}
                     viewBox="0 0 150 40"
