@@ -46,7 +46,7 @@ function Section({ title, members }) {
     return (
         <div className="mb-10 flex flex-col justify-center items-center">
             <h2 className="text-3xl text-white font-semibold mb-6">{title}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 w-full px-6 md:px-20 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 w-full px-14 md:px-20 gap-8">
                 {members.map((member, index) => (
                     <TeamCard key={index} member={member} />
                 ))}
@@ -59,7 +59,7 @@ function TeamCard({ member }) {
     const whatsappLink = member.whatsapp ? `https://wa.me/${member.whatsapp}` : null;
 
     return (
-        <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+        <div className="bg-white border-glow p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
             <img src={member.img} alt={member.name} className="w-44 h-44 rounded-full border-4 border-gray-300 mx-auto mb-4" />
             <h3 className="text-2xl font-bold text-center mb-2">{member.name}</h3>
             <p className="text-center text-gray-600">{member.role}</p>
