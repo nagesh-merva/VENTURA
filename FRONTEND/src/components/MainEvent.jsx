@@ -1,11 +1,10 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, { useEffect, useRef } from 'react'
 
 const mainEvents = [
     {
         imgUrl: "/pitchtank.png",
         name: "PITCH TANK",
-        description: "Inspired by the popular show, Pitch Tank invites aspiring entrepreneurs to pitch their innovative ideas to a panel of judges. Teams will have to convince the panel why their product or service is a game- changer.Whether youre starting a tech company or launching a social initiative, this is your platform to shine.",
+        description: "Inspired by the popular show, Pitch Tank invites aspiring entrepreneurs to pitch their innovative ideas to a panel of judges. Teams will have to convince the panel why their product or service is a game- changer.Whether you're starting a tech company or launching a social initiative, this is your platform to shine.",
     },
     {
         imgUrl: "/brandbuilder.png",
@@ -24,37 +23,42 @@ const mainEvents = [
     }
 ]
 
-const cardVariants = {
-    offscreen: {
-        opacity: 0,
-        y: 150
-    },
-    onscreen: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            type: "spring",
-            bounce: 0.3,
-            duration: 0.6
-        }
-    }
-}
-
 function MainEventDisplay() {
+    const eventRefs = useRef([])
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up')
+                } else {
+                    entry.target.classList.remove('animate-fade-in-up')
+                }
+            })
+        }, {
+            threshold: 0.3,
+        });
+
+        eventRefs.current.forEach((ref) => {
+            if (ref) observer.observe(ref)
+        });
+
+        return () => {
+            eventRefs.current.forEach((ref) => {
+                if (ref) observer.unobserve(ref)
+            })
+        }
+    }, []);
     return (
         <div className="relative z-40 mx-5 my-10 md:mx-24 md:my-20 px-4 py-8 bg-white/10 border border-gray-300 rounded-lg shadow-md backdrop-blur-lg">
             <h1 className="text-4xl font-bold text-blue-500 mb-8">MAIN EVENTS</h1>
             <ol className="space-y-10 z-50">
                 {mainEvents.map((event, index) => (
-                    <motion.li
+                    <li
                         key={index}
-                        className="relative optimse flex flex-col sm:flex-row items-center mb-8 border border-blue-500/30 p-6 rounded-lg bg-gradient-to-r from-blue-900/60 via-gray-900 to-blue-900/60 backdrop-blur-lg shadow-lg glow-effect"
-                        initial="offscreen"
-                        whileInView="onscreen"
-                        viewport={{ once: true, amount: 0.3 }}
-                        variants={cardVariants}
+                        ref={(el) => (eventRefs.current[index] = el)}
+                        className="relative flex flex-col sm:flex-row items-center mb-8 border border-blue-500/30 p-6 rounded-lg bg-gradient-to-r from-blue-900/60 via-gray-900 to-blue-900/60 backdrop-blur-lg shadow-lg opacity-0 transform translate-y-8"
                     >
-
                         <div className="sm:w-1/4 mb-6 sm:mb-0 sm:mr-8 flex justify-center">
                             <img src={event.imgUrl} alt={event.name} className="rounded-lg w-48 h-48 object-cover shadow-lg border border-white/20" />
                         </div>
@@ -66,8 +70,7 @@ function MainEventDisplay() {
                                 <button className="px-4 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-900 shadow-md">View Details</button>
                             </div>
                         </div>
-
-                    </motion.li>
+                    </li>
                 ))}
             </ol>
         </div>

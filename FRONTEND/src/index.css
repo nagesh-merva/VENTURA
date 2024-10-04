@@ -58,3 +58,19 @@ body {
 .optimse {
     will-change: transform, opacity;
 }
+
+@keyframes pop-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-pop-in {
+    animation: pop-in 0.8s cubic-bezier(0, 0.71, 0.2, 1.01) forwards;
+}

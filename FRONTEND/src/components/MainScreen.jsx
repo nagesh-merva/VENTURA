@@ -1,14 +1,36 @@
 import { useState, useRef, useEffect } from "react"
 import Lottie from "lottie-react"
 import { timeline } from '@motionone/dom'
-import { motion } from "framer-motion"
 const animationALoader = () => import('../assets/Animation-1.json')
 const animationBLoader = () => import('../assets/Animation-2.json')
 
 function MainScreen() {
     const textRef = useRef(null)
+    const imgRef = useRef(null)
     const [animationA, setAnimationA] = useState(null)
     const [animationB, setAnimationB] = useState(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-pop-in')
+                } else {
+                    entry.target.classList.remove('animate-pop-in')
+                }
+            })
+        }, { threshold: 0.3 })
+
+        if (imgRef.current) {
+            observer.observe(imgRef.current)
+        }
+
+        return () => {
+            if (imgRef.current) {
+                observer.unobserve(imgRef.current)
+            }
+        }
+    }, [])
 
     useEffect(() => {
         animationALoader().then((anim) => setAnimationA(anim.default))
@@ -22,7 +44,7 @@ function MainScreen() {
         const animation = timeline(letters.map((letter, i) => [
             letter,
             { strokeDashoffset: [letter.getTotalLength(), 0] },
-            { duration: 4, delay: i * 0.25, fill: 'forwards' }
+            { duration: 4, delay: i * 0.5, fill: 'forwards' }
         ]))
 
         return () => animation.stop()
@@ -46,17 +68,14 @@ function MainScreen() {
                     </text>
                 </svg>
                 <p className='text-md pt-5 md:text-3xl font-semibold font-poppins text-stone-300 text-center pb-4 tracking-wide '>Brought to you by ECELL GEC in Collaboration with Vibrant Goa</p>
-                <motion.div
-                    className="box optimse"
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{
-                        duration: 0.8,
-                        delay: 0.5,
-                        ease: [0, 0.71, 0.2, 1.01]
-                    }}
-                ><img src="/vibrantgoa.png" alt="vibrantgoa" className="h-20 optimse z-40 md:h-48 w-auto " />
-                </motion.div>
+                <div className="box optimse">
+                    <img
+                        ref={imgRef}
+                        src="/vibrantgoa.png"
+                        alt="vibrantgoa"
+                        className="h-20 optimse z-40 md:h-48 w-auto opacity-0 scale-50"
+                    />
+                </div>
             </div>
         </div>
     )
