@@ -36,7 +36,7 @@ function MainEventDisplay() {
                 }
             })
         }, {
-            threshold: 0.3,
+            threshold: 0.2,
         });
 
         eventRefs.current.forEach((ref) => {
