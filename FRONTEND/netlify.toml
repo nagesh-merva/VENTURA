@@ -1,0 +1,4 @@
+[build]
+base = "frnd" # Ensure that this folder exists in your project root
+publish = "build" # The directory where your final build will be placed
+command = "npm run build" # Your build command
