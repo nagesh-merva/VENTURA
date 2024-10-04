@@ -16,7 +16,7 @@ const teamData = {
         { name: "Shubham Vaidu ", role: "Event Head", img: "/janeroe.jpg", linkedin: '', whatsapp: '8605517107' },
         { name: "Tasneem ", role: "Marketing Head", img: "/janeroe.jpg", linkedin: '', whatsapp: '9011783766' },
         { name: "Irshad ", role: "Assistant Marketing Head", img: "/janeroe.jpg", linkedin: '', whatsapp: '' },
-        { name: "John Fernandes ", role: "Startup Head", img: "/janeroe.jpg", linkedin: '', whatsapp: '9527722619' },
+        { name: "Johan Fernandes ", role: "Startup Head", img: "/janeroe.jpg", linkedin: 'https://www.linkedin.com/in/johan-fernandes-2607b9270?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', whatsapp: '9527722619' },
         { name: "Nagesh Merva ", role: "Technical Head", img: "/nagesh.jpg", linkedin: 'https://www.linkedin.com/in/nagesh-merva-8b2b57289', whatsapp: '7264833272' },
         { name: "Bhuvanshika", role: "PR Head", img: "/janeroe.jpg", linkedin: '', whatsapp: '8793112169' },
     ],
