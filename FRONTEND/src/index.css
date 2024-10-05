@@ -21,10 +21,6 @@ body {
     }
 }
 
-.animate-flow {
-    background-size: 200% 200%;
-    animation: gradient-flow 8s ease infinite;
-}
 
 @layer components {
     .stroke-dasharray {

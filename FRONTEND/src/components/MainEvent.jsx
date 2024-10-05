@@ -49,6 +49,7 @@ function MainEventDisplay() {
             })
         }
     }, []);
+
     return (
         <div className="relative z-40 mx-5 my-10 md:mx-24 md:my-20 px-4 py-8 bg-white/10 border border-gray-300 rounded-lg shadow-md backdrop-blur-lg">
             <h1 className="text-4xl font-bold text-blue-500 mb-8">MAIN EVENTS</h1>

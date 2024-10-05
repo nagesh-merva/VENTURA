@@ -9,6 +9,15 @@ function MainScreen() {
     const imgRef = useRef(null)
     const [animationA, setAnimationA] = useState(null)
     const [animationB, setAnimationB] = useState(null)
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768)
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [])
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -44,7 +53,7 @@ function MainScreen() {
         const animation = timeline(letters.map((letter, i) => [
             letter,
             { strokeDashoffset: [letter.getTotalLength(), 0] },
-            { duration: 4, delay: i * 0.5, fill: 'forwards' }
+            { duration: 4, delay: i * 0.25, fill: 'forwards' }
         ]))
 
         return () => animation.stop()
@@ -54,7 +63,12 @@ function MainScreen() {
         <div className="h-full w-full z-40 relative">
             <div className="relative px-4  md:px-0 pt-4 h-full w-full flex flex-col justify-center items-center">
                 {animationA && <Lottie animationData={animationA} className="fixed optimse bottom-0 md:-bottom-60 z-0 scale-150 md:scale-100" />}
-                {animationB && <Lottie animationData={animationB} className="fixed optimse top-0 md:-top-28 md:right-0 z-0 scale-150 md:scale-100" />}
+                {isMobile && animationA && (
+                    <Lottie animationData={animationA} className="fixed optimse -top-24 md:-bottom-60 z-0 scale-150 md:scale-100" />
+                )}
+                {!isMobile && animationB && (
+                    <Lottie animationData={animationB} className="fixed optimse top-0 md:-top-28 md:right-0 z-0 scale-150 md:scale-100" />
+                )}
                 <svg
                     ref={textRef}
                     viewBox="0 0 150 40"
