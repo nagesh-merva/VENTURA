@@ -58,7 +58,7 @@ function MainEventDisplay() {
                     <li
                         key={index}
                         ref={(el) => (eventRefs.current[index] = el)}
-                        className="relative flex flex-col sm:flex-row items-center mb-8 border border-blue-500/30 p-6 rounded-lg bg-gradient-to-r from-blue-900/60 via-gray-900 to-blue-900/60 backdrop-blur-lg shadow-lg opacity-0 transform translate-y-8"
+                        className="relative flex flex-col sm:flex-row items-center mb-8 border border-blue-500 p-6 rounded-lg transform translate-y-8"
                     >
                         <div className="sm:w-1/4 mb-6 sm:mb-0 sm:mr-8 flex justify-center">
                             <img src={event.imgUrl} alt={event.name} className="rounded-lg w-48 h-48 object-cover shadow-lg border border-white/20" />
