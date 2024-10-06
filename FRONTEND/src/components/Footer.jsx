@@ -12,7 +12,7 @@ function Footer() {
                     <div className="mt-8 md:mt-0">
                         <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
                         <p>Email: <a href="mailto:ecellofgec@gmail.com" className="text-blue-500 hover:underline">ecellofgec@gmail.com</a></p>
-                        <p>Whatsapp: <a href="https://wa.me/9822121460" className="text-blue-500 hover:underline">Aisha Fernandes</a></p>
+                        <p>Whatsapp: <a href="https://wa.me/7769879833" className="text-blue-500 hover:underline">Manoj Paschapur</a></p>
                         <div className="flex space-x-4 mt-4">
                             <a href="https://www.instagram.com/ecell_of_gec/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer">
                                 <img src="/instagram.png" alt="Instagram" className="w-8 h-8" />
