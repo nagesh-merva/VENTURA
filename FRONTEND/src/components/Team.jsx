@@ -14,7 +14,7 @@ const teamData = {
         { name: "Manoj Paschapur", role: "Ecell President", img: "/manoj.jpg", linkedin: '', whatsapp: '7769879833' },
         { name: "Ahmed ", role: "Ecell Vice President", img: "/ahmed.jpg", linkedin: '', whatsapp: '7774881382' },
         { name: "Yash Palan ", role: "Ecell Treasurer", img: "/yash.jpg", linkedin: '', whatsapp: '7040910033' },
-        { name: "Shubham Vaidu ", role: "Event Head", img: "/shubham.jpg", linkedin: '', whatsapp: '8605517107' },
+        { name: "Shubham Vaiude", role: "Event Head", img: "/shubham.jpg", linkedin: '', whatsapp: '8605517107' },
         { name: "Tasneem ", role: "Marketing Head", img: "/janeroe.jpg", linkedin: '', whatsapp: '9011783766' },
         { name: "Irshad ", role: "Assistant Marketing Head", img: "/janeroe.jpg", linkedin: '', whatsapp: '' },
         { name: "Johan Fernandes ", role: "Startup Head", img: "/janeroe.jpg", linkedin: 'https://www.linkedin.com/in/johan-fernandes-2607b9270?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', whatsapp: '9527722619' },
