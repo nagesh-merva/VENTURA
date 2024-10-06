@@ -3,14 +3,18 @@ import React from 'react';
 const events = [
     {
         title: "Events Registrations",
-        date: "Starts on October 8, 2024"
+        date: "Starts on October 7, 2024"
     },
     {
-        title: "Initial Events",
+        title: "Pitchers Arena Events and BBB",
+        date: "Starts on October 17, 2024"
+    },
+    {
+        title: "Remaining Event",
         date: "Starts on October 18, 2024"
     },
     {
-        title: "Finale at Vibrant Goa",
+        title: "Feature & Award ceremony at Vibrant Goa",
         date: "Starts on November 8, 2024"
     }
 ];

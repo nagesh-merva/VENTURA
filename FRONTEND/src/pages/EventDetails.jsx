@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import mainEvents from '../js/MainEvents'
 import NavBar from '../components/NavBar'
@@ -7,11 +8,16 @@ import TeamCard from '../components/MemberCard'
 
 function EventDetails() {
     const { eventId } = useParams()
+    const { pathname } = useLocation()
     const event = mainEvents.find(e => e.name === decodeURIComponent(eventId))
 
     if (!event) {
         return <h2 className="text-2xl text-white text-center mt-10">Event not found</h2>
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname])
 
     return (
         <div className="relative w-full py-20">
@@ -29,7 +35,13 @@ function EventDetails() {
                 <p className="text-lg text-gray-300 mb-4"><strong>Time:</strong> {event.timing}</p>
                 <p className="text-lg text-gray-300 mb-4"><strong>Location:</strong> {event.location}</p>
 
-                {event.prize && (<p className="text-lg text-gray-300 mb-6"><strong>Prize:</strong> {event.prize}</p>)}
+                {event.prize && (
+                    < div className='mb-6'><p className="text-lg text-gray-300 "><strong>Prize:</strong></p><ul>
+                        {event.prize.map((prize, index) => (
+                            <li className='text-lg text-gray-300 text-center' key={index}>{prize}</li>
+                        ))}
+                    </ul></div>
+                )}
 
                 {event.name === "Engineers to Entrepreneurs" ? (
                     <h3 className="text-2xl font-bold text-white mb-4">It will cover</h3>
