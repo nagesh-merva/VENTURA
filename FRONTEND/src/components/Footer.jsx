@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer className="absolute w-full bg-black z-40 text-white py-10 px-5 sm:px-20">
+        <footer className="absolute left-0 w-full bg-black z-40 text-white py-10 px-5 sm:px-20">
             <div className="container mx-auto">
                 <div className="flex flex-col md:flex-row items-center justify-between mb-8">
                     <div className="flex flex-col items-center md:items-start">
@@ -11,7 +11,7 @@ function Footer() {
                     </div>
                     <div className="mt-8 md:mt-0">
                         <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
-                        <p>Email: <a href="mailto:officialnagesh.merva@gmail.com" className="text-blue-500 hover:underline">officialnagesh.merva@gmail.com</a></p>
+                        <p>Email: <a href="mailto:ecellofgec@gmail.com" className="text-blue-500 hover:underline">ecellofgec@gmail.com</a></p>
                         <p>Whatsapp: <a href="https://wa.me/9822121460" className="text-blue-500 hover:underline">Aisha Fernandes</a></p>
                         <div className="flex space-x-4 mt-4">
                             <a href="https://www.instagram.com/ecell_of_gec/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer">
