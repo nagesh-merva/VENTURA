@@ -5,29 +5,29 @@ import mainEvents from "../js/MainEvents.js"
 function MainEventDisplay() {
     const eventRefs = useRef([])
 
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in-up')
-                } else {
-                    entry.target.classList.remove('animate-fade-in-up')
-                }
-            })
-        }, {
-            threshold: 0.15,
-        })
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver((entries) => {
+    //         entries.forEach((entry) => {
+    //             if (entry.isIntersecting) {
+    //                 entry.target.classList.add('animate-fade-in-up')
+    //             } else {
+    //                 entry.target.classList.remove('animate-fade-in-up')
+    //             }
+    //         })
+    //     }, {
+    //         threshold: 0.15,
+    //     })
 
-        eventRefs.current.forEach((ref) => {
-            if (ref) observer.observe(ref)
-        });
+    //     eventRefs.current.forEach((ref) => {
+    //         if (ref) observer.observe(ref)
+    //     });
 
-        return () => {
-            eventRefs.current.forEach((ref) => {
-                if (ref) observer.unobserve(ref)
-            })
-        }
-    }, [])
+    //     return () => {
+    //         eventRefs.current.forEach((ref) => {
+    //             if (ref) observer.unobserve(ref)
+    //         })
+    //     }
+    // }, [])
 
     return (
         <div className="relative z-40 mx-5 my-10 md:mx-24 md:my-20 px-4 py-8 bg-white/10 border border-gray-300 rounded-lg shadow-md backdrop-blur-lg">
@@ -37,7 +37,7 @@ function MainEventDisplay() {
                     <li
                         key={index}
                         ref={(el) => (eventRefs.current[index] = el)}
-                        className="relative flex flex-col sm:flex-row items-center mb-8 border opacity-0 border-blue-500 p-6 rounded-lg transform translate-y-8"
+                        className="relative flex flex-col sm:flex-row items-center mb-8 border bg-blue-500/10 border-blue-500 p-6 rounded-lg transform translate-y-8"
                     >
                         <div className="sm:w-1/4 mb-6 sm:mb-0 sm:mr-8 flex justify-center">
                             <img src={event.imgUrl} alt={event.name} className="rounded-lg w-48 h-48 object-cover shadow-lg border border-white/20" />
