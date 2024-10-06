@@ -98,7 +98,7 @@ const mainEvents = [
         ],
         timing: "02.00 PM : 18TH OCTOBER 2024",
         location: "Auditorium Hall 2",
-        link: 'https://docs.google.com/forms/d/e/1FAIpQLScI7KIckkWf6DalZlISB1Na_yRprpjba7trI2elkIVdDrwceQ/viewform?usp=sf_link'
+        link: 'https://docs.google.com/forms/d/e/1FAIpQLScRdaPbHipaen-q_vk3InVO9rjEQYkToxPd0-Hw7_0R5aTwFA/viewform?usp=sf_link'
     },
     {
         imgUrl: "/brandbuilder.png",
@@ -115,8 +115,8 @@ const mainEvents = [
         prize: [
             "1. Rs 300", "2. Rs 200"
         ],
-        link: 'https://docs.google.com/forms/d/e/1FAIpQLScI7KIckkWf6DalZlISB1Na_yRprpjba7trI2elkIVdDrwceQ/viewform?usp=sf_link'
+        link: ''
     }
-];
+]
 
-export default mainEvents;
+export default mainEvents

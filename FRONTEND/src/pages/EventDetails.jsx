@@ -61,10 +61,12 @@ function EventDetails() {
                     ))}
                 </ul>
             </div>
+            {event.link && (
+                <a href={event.link} className="fixed bottom-6 left-1/2 transform -translate-x-1/2 w-5/6 bg-blue-600 text-white px-6 py-3 rounded-full text-center text-lg shadow-md hover:bg-blue-700">
+                    Register
+                </a>
+            )}
 
-            <a href={event.link} className="fixed bottom-6 left-1/2 transform -translate-x-1/2 w-5/6 bg-blue-600 text-white px-6 py-3 rounded-full text-center text-lg shadow-md hover:bg-blue-700">
-                Register
-            </a>
             <Footer />
         </div>
     )
