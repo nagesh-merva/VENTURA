@@ -15,7 +15,8 @@ const mainEvents = [
         ],
         timing: "10:00 AM - 1:00 PM",
         location: "Auditorium Hall 1",
-        prize: "₹50,000 for the winning team"
+        prize: "₹50,000 for the winning team",
+        link: 'https://docs.google.com/forms/d/e/1FAIpQLScI7KIckkWf6DalZlISB1Na_yRprpjba7trI2elkIVdDrwceQ/viewform?usp=sf_link'
     },
     {
         imgUrl: "/brandbuilder.png",
@@ -34,7 +35,8 @@ const mainEvents = [
         ],
         timing: "2:00 PM - 5:00 PM",
         location: "Exhibition Hall B",
-        prize: "₹25,000 for the winning team"
+        prize: "₹25,000 for the winning team",
+        link: 'https://docs.google.com/forms/d/e/1FAIpQLScWHdSma22x4jD43TDv8tRtIoqJFZ-ShhJGmT0q4t0jBOYXiA/viewform?usp=sf_link'
     },
     {
         imgUrl: "/casestudy.png",
@@ -52,7 +54,8 @@ const mainEvents = [
         ],
         timing: "11:00 AM - 1:30 PM",
         location: "Conference Room 2",
-        prize: "₹30,000 for the winning team"
+        prize: "₹30,000 for the winning team",
+        link: 'https://docs.google.com/forms/d/e/1FAIpQLSeBaZE2YzSO8pHRUeZZAF3c-Q6fW-fQwp5GL-e5RCJggkBogg/viewform?usp=sf_link'
     },
     {
         imgUrl: "/adbattle.png",
@@ -69,7 +72,8 @@ const mainEvents = [
         ],
         timing: "3:00 PM - 5:30 PM",
         location: "Auditorium Hall 2",
-        prize: "₹20,000 for the winning team"
+        prize: "₹20,000 for the winning team",
+        link: 'https://docs.google.com/forms/d/e/1FAIpQLScwma_VLtXAr4Hnhk65zSZSA9TPoBRAwHdLFlNJ85Vy7vGCVA/viewform?usp=sf_link'
     },
     {
         imgUrl: "/talk.png",
@@ -86,6 +90,7 @@ const mainEvents = [
         ],
         timing: "3:00 PM - 5:30 PM",
         location: "Auditorium Hall 2",
+        link: 'https://docs.google.com/forms/d/e/1FAIpQLScI7KIckkWf6DalZlISB1Na_yRprpjba7trI2elkIVdDrwceQ/viewform?usp=sf_link'
     }
 ];
 

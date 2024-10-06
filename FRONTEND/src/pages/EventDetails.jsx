@@ -14,9 +14,9 @@ function EventDetails() {
     }
 
     return (
-        <div className="relative max-w-4xl mx-auto px-6 py-20">
+        <div className="relative w-full py-20">
             <NavBar />
-            <div className='bg-white/10 px-6 py-12 border border-gray-300 rounded-lg shadow-md backdrop-blur-lg'>
+            <div className='bg-white/10 mx-6 px-6 py-12 border border-gray-300 rounded-lg shadow-md backdrop-blur-lg'>
 
                 <div className="flex justify-center mb-6">
                     <img src={event.imgUrl} alt={event.name} className="w-32 h-auto rounded-lg shadow-lg" />
@@ -48,12 +48,11 @@ function EventDetails() {
                         <TeamCard key={index} member={coordinator} />
                     ))}
                 </ul>
-
             </div>
 
-            <button className="fixed bottom-6 left-1/2 transform -translate-x-1/2 w-5/6 bg-blue-600 text-white px-6 py-3 rounded-full text-lg shadow-md hover:bg-blue-700">
+            <a href={event.link} className="fixed bottom-6 left-1/2 transform -translate-x-1/2 w-5/6 bg-blue-600 text-white px-6 py-3 rounded-full text-center text-lg shadow-md hover:bg-blue-700">
                 Register
-            </button>
+            </a>
             <Footer />
         </div>
     )
