@@ -68,6 +68,7 @@ const mainEvents = [
         name: "Market Up",
         description: "Participants will create a 1.5-minute advertisement based on a given brand.The ad should creatively showcase the brand’s values, products, or services while engaging the target audience.Whether humorous or serious, the ad must convey the brand’s message effectively and within the time limit",
         rules: [
+            " 1-4 members will be a allowed in a Team",
             "Advertisements must not exceed 1.5 minutes in duration",
             "The brand will be assigned when registration closes",
             "All content must be original and free from plagiarism",
