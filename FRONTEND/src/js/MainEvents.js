@@ -33,7 +33,7 @@ const mainEvents = [
         coordinators: [
             { name: "Ahmed ", role: "Ecell Vice President", img: "/ahmed.jpg", linkedin: '', whatsapp: '7774881382' },
             { name: "Nagesh Merva ", role: "Technical Head", img: "/nagesh.jpg", linkedin: 'https://www.linkedin.com/in/nagesh-merva-8b2b57289', whatsapp: '7264833272' },
-            { name: "Tasneem ", role: "Marketing Head", img: "/janeroe.jpg", linkedin: '', whatsapp: '9011783766' },
+            { name: "Tasneem ", role: "Marketing Head", img: "/tasneem.jpg", linkedin: '', whatsapp: '9011783766' },
         ],
         timing: "10:00 AM TO 2:30 PM : 17TH OCTOBER 2024",
         location: "MINING DEPARTMENT",
@@ -108,7 +108,7 @@ const mainEvents = [
         coordinators: [
             { name: "Ahmed ", role: "Ecell Vice President", img: "/ahmed.jpg", linkedin: '', whatsapp: '7774881382' },
             { name: "Nagesh Merva ", role: "Technical Head", img: "/nagesh.jpg", linkedin: 'https://www.linkedin.com/in/nagesh-merva-8b2b57289', whatsapp: '7264833272' },
-            { name: "Tasneem ", role: "Marketing Head", img: "/janeroe.jpg", linkedin: '', whatsapp: '9011783766' },
+            { name: "Tasneem ", role: "Marketing Head", img: "/tasneem.jpg", linkedin: '', whatsapp: '9011783766' },
         ],
         timing: " 11:00 AM TO 02:30 PM : 18TH OCTOBER 2024",
         location: "MINING DEPARTMENT",
