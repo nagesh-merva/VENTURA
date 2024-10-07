@@ -75,7 +75,7 @@ const mainEvents = [
             "Teams will be judged on creativity, message clarity, and brand alignment"
         ],
         coordinators: [
-            { name: "ROHIT HADAPAD", whatsapp: " 7757041577" }
+            { name: "ROHIT HADAPAD", img: "/rohit.jpg", whatsapp: " 7757041577" }
         ],
         timing: "till : 16TH OCTOBER 2024",
         location: "Online",
