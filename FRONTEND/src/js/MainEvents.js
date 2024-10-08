@@ -10,7 +10,7 @@ const mainEvents = [
             "Participants should prepare a PowerPoint presentation Including the Problem Statement, Solution, Market Analysis, Revenue Model, Challenges, and Future Scope"
         ],
         coordinators: [
-            { name: "VISHNU VARIYAR", whatsapp: "8329708421" },
+            { name: "VISHNU VARIYAR", whatsapp: "+918329708421" },
             { name: "SHREY SINGH", whatsapp: "" }
         ],
         timing: "10:00 AM TO 1:15 PM : 17TH OCTOBER 2024",
