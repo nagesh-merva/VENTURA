@@ -42,6 +42,11 @@ function EventTimeline() {
                     </li>
                 ))}
             </ol>
+            <div class="flex justify-center mt-8">
+                <a href="/ventura.pdf" download="ventura.pdf" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow-lg transition duration-300 ease-in-out">
+                    Download Brochure
+                </a>
+            </div>
         </div>
     );
 }
