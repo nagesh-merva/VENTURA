@@ -104,8 +104,8 @@ const mainEvents = [
     {
         imgUrl: "/brandbuilder.png",
         name: "FUN EVENT",
-        description: "Participants will be alloted a fixed amount of virtual currency by the event coordinator.This virtual currency will be used to buy products from various stalls set up by the participants of the Brand builder battle.After reviewing and purchasing, the products will be rated by a panel of judges. The participants with the highest- rated products will be recognised, and the buyers of these top - rated products will be the winners.",
-        rules: [],
+        description: "ON SPOT REGISTRATIONS.Participants will be alloted a fixed amount of virtual currency by the event coordinator.This virtual currency will be used to buy products from various stalls set up by the participants of the Brand builder battle.After reviewing and purchasing, the products will be rated by a panel of judges. The participants with the highest- rated products will be recognised, and the buyers of these top - rated products will be the winners.",
+        rules: ["ON SPOT REGISTRATIONS"],
         coordinators: [
             { name: "Ahmed ", role: "Ecell Vice President", img: "/ahmed.jpg", linkedin: '', whatsapp: '7774881382' },
             { name: "Nagesh Merva ", role: "Technical Head", img: "/nagesh.jpg", linkedin: 'https://www.linkedin.com/in/nagesh-merva-8b2b57289', whatsapp: '7264833272' },
