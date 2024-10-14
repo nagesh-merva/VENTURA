@@ -28,7 +28,22 @@ function Footer() {
                     <div className="flex flex-wrap justify-center space-x-4">
                         <img src="/vibrantgoa.png" alt="Sponsor 1" className="w-24 h-24 object-contain mb-4" />
                         <img src="/gec.png" alt="Sponsor 2" className="w-24 h-24 object-contain mb-4" />
-                        <img src="/ecell.jpg" alt="Sponsor 3" className="w-24 h-24 object-contain mb-4" />
+                        <img src="/sponsored company logo/armines.jpg" alt="Sponsor 3" className="w-24 h-24 object-contain mb-4" />
+                        <img src="/sponsored company logo/blackbean.png" alt="Sponsor 4" className="w-24 h-24 object-contain mb-4" />
+                        <img src="/sponsored company logo/bluefort.jpg" alt="Sponsor 5" className="w-24 h-24 object-contain mb-4" />
+                        <img src="/sponsored company logo/eduadvise.png" alt="Sponsor 6" className="w-24 h-24 object-contain mb-4" />
+                        <img src="/sponsored company logo/ELEVA.jpg" alt="Sponsor 7" className="w-24 h-24 object-contain mb-4" />
+                        <img src="/sponsored company logo/engageHR.png" alt="Sponsor 8" className="w-24 h-24 object-contain mb-4" />
+                        <img src="/sponsored company logo/EPkamatgroup.png" alt="Sponsor 9" className="w-24 h-24 object-contain mb-4" />
+                        <img src="/sponsored company logo/finishingtouch.png" alt="Sponsor 10" className="w-24 h-24 object-contain mb-4" />
+                        <img src="/sponsored company logo/gmizarhak.jpeg" alt="Sponsor 11" className="w-24 h-24 object-contain mb-4" />
+                        <img src="/sponsored company logo/infinity3D.png" alt="Sponsor 12" className="w-24 h-24 object-contain mb-4" />
+                        <img src="/sponsored company logo/patelcosmetics.jpg" alt="Sponsor 13" className="w-24 h-24 object-contain mb-4" />
+                        <img src="/sponsored company logo/powertrac.png" alt="Sponsor 14" className="w-24 h-24 object-contain mb-4" />
+                        <img src="/sponsored company logo/SpatialCraft.png" alt="Sponsor 15" className="w-24 h-24 bg-white object-contain mb-4" />
+                        <img src="/sponsored company logo/TELHADO.jpg" alt="Sponsor 16" className="w-24 h-24 object-contain mb-4" />
+                        <img src="/sponsored company logo/upgrade.jpg" alt="Sponsor 17" className="w-24 h-24 object-contain mb-4" />
+                        <img src="/sponsored company logo/veezomotors.png" alt="Sponsor 18" className="w-24 h-24 object-contain mb-4" />
                     </div>
                 </div>
                 <div className="w-full h-64">

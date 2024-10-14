@@ -30,7 +30,7 @@ function NavBar() {
                 <div className="absolute right-0 top-16 bg-gray-950/90 w-full py-2">
                     <ul className="text-white font-sans font-bold space-y-2">
                         <li className=" hover:underline decoration-blue-600 text-center" onClick={handleHomeClick}>Home</li>
-                        <li className=" hover:underline decoration-blue-600 text-center" onClick={handleTeamClick}>Coordinators</li>
+                        <li className=" hover:underline decoration-blue-600 text-center" onClick={handleTeamClick}>Organisers</li>
                     </ul>
                 </div>
             )}

@@ -26,7 +26,7 @@ const teamData = {
     ],
     sponsors: [
         { name: "Jagat Shah", role: "Mentor", img: "/jagatshah.png", linkedin: '', whatsapp: '' },
-        { name: "Vibrant Goa Foundation", role: "Sponsor", img: "/vibrantgoa.png", linkedin: '', whatsapp: '' },
+        { name: "Vibrant Goa Foundation", role: "Mentor", img: "/vibrantgoa.png", linkedin: '', whatsapp: '' },
     ]
 }
 
