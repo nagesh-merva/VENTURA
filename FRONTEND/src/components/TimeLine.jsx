@@ -10,7 +10,7 @@ const events = [
         date: "Starts on October 17, 2024"
     },
     {
-        title: "Remaining Event",
+        title: "Ecell Inaugration, Failure Forensics and Talk",
         date: "Starts on October 18, 2024"
     },
     {
