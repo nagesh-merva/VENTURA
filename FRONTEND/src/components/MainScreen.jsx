@@ -1,23 +1,11 @@
 import { useState, useRef, useEffect } from "react"
 import Lottie from "lottie-react"
 import { timeline } from '@motionone/dom'
-const animationALoader = () => import('../assets/Animation-1.json')
-const animationBLoader = () => import('../assets/Animation-2.json')
+import animationA from '../assets/Animation-3.json'
 
 function MainScreen() {
     const textRef = useRef(null)
     const imgRef = useRef(null)
-    const [animationA, setAnimationA] = useState(null)
-    const [animationB, setAnimationB] = useState(null)
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
-
-    useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth < 768)
-        window.addEventListener('resize', handleResize)
-        return () => {
-            window.removeEventListener('resize', handleResize)
-        }
-    }, [])
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -42,11 +30,6 @@ function MainScreen() {
     }, [])
 
     useEffect(() => {
-        animationALoader().then((anim) => setAnimationA(anim.default))
-        animationBLoader().then((anim) => setAnimationB(anim.default))
-    }, [])
-
-    useEffect(() => {
         const svg = textRef.current
 
         const letters = Array.from(svg.querySelectorAll('text path'))
@@ -61,14 +44,9 @@ function MainScreen() {
 
     return (
         <div className="h-full w-full z-40 relative">
+            <div className="h-full absolute -z-0 w-full bg-gradient-to-b from-blue-600 to-transparent"></div>
             <div className="relative px-4  md:px-0 pt-4 h-full w-full flex flex-col justify-center items-center">
-                {animationA && <Lottie animationData={animationA} className="fixed optimse bottom-0 md:-bottom-60 z-0 scale-150 md:scale-100" />}
-                {isMobile && animationA && (
-                    <Lottie animationData={animationA} className="fixed optimse -top-24 md:-bottom-60 z-0 scale-150 md:scale-100" />
-                )}
-                {!isMobile && animationB && (
-                    <Lottie animationData={animationB} className="fixed optimse top-0 md:-top-28 md:right-0 z-0 scale-150 md:scale-100" />
-                )}
+                <Lottie animationData={animationA} className="fixed optimse bottom-0 md:-bottom-60 z-0 scale-150 md:scale-100" />
                 <svg
                     ref={textRef}
                     viewBox="0 0 150 40"
